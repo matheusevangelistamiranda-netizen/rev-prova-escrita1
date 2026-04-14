@@ -1,43 +1,69 @@
-*{
+* {
     margin: 0;
     padding: 0;
-} 
+}
 
-.grupo{
+.grupo {
     display: flex;
     flex-direction: column;
 }
 
-
-.cabecalho{
-    background-color: aquamarine;
-    color: black;
+.cabecalho {
+    background-color: #dd8c12;
+    color: #fff;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navegacao{
-    background-color: brown;
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.menu a:hover {
+    color: red;
+}
+
+.conteudo {
+    display: flex;
+}
+
+.navegacao {
+    background-color: #ad5566;
     display: inline-block;
     width: 30%;
     padding: 10px;
 }
 
-.secao{
-    background-color: blue;
+.navegacao ul {
+    list-style: none;
+    padding: 0;
 }
 
-.formulario{
+.navegacao li {
     margin-bottom: 10px;
 }
 
-.secao p {
+.secao {
+    background-color: #8332a9;
+    display: inline-block;
+    width: 70%;
     padding: 10px;
 }
 
-.secao
+.secao p {
+    margin-bottom: 10px;
+}
 
-.rodape{
-    background-color: gold;
+.formulario {
+    margin-bottom: 10px;
+}
+
+.rodape {
+    background-color: #00ddff;
     height: 70px;
     padding: 0 20px;
     display: flex;
@@ -45,16 +71,15 @@
     align-items: center;
 }
 
-.redes{
+.redes {
     display: flex;
-
+    align-items: center;
 }
 
-.redes img{
+.redes img {
     margin-left: 10px;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
+    width: 20px;
+    height: 20px;
 }
 
 .redes a {
@@ -62,4 +87,23 @@
     align-items: center;
     gap: 5px;
     text-decoration: none;
+}
+
+.redes a:hover {
+    color: #fff;
+    opacity: 0.7;
+}
+
+--------------------------------------------------------------------------------------------------
+
+JS
+
+function alterarNome() {
+    let trocarNome = document.getElementById('inputNome').value;
+
+    if (trocarNome === "") {
+        alert('Digite um Nome')
+    } else {
+        document.getElementById('nomeUsuario').innerHTML = trocarNome;
+    }
 }
